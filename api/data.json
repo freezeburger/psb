@@ -21,12 +21,12 @@
   "users":[
     {
       "id":1,
-      "email":"user1@secib.fr",
+      "email":"user1@secib.be",
       "password":"secib"
     },
     {
       "id":2,
-      "email":"user2@secib.fr",
+      "email":"user2@secib.be",
       "password":"secib"
     }
   ],

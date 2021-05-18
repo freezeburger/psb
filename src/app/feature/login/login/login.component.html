@@ -14,30 +14,38 @@
 
   <form class="ui large form">
 
+    <h3>{{ (mode === 'login') ? 'Login' :'Register' }}</h3>
+
     <div class="ui stacked segment">
       <div class="field">
         <div class="ui left icon input">
           <i class="user icon"></i>
-          <input type="text" name="email" placeholder="E-mail address" [(ngModel)]="credentials.email">
+          <input type="text" name="email"
+                      placeholder="E-mail address"
+                      [(ngModel)]="credentials.email"
+                      required pattern="^[a-z]{2,}@secib.be"
+                      >
         </div>
       </div>
 
       <div class="field">
         <div class="ui left icon input">
           <i class="lock icon"></i>
-          <input [type]="type" name="password" placeholder="Password"  [(ngModel)]="credentials.password">
+          <input [type]="type" name="password" placeholder="Password"  [(ngModel)]="credentials.password" required>
         </div>
       </div>
       <a (mousedown)=" type = 'text' " (mouseup)="  type = 'password' ">Show Password</a>
 
       <br><br>
-      <app-login-register  *ngIf=" mode === 'register' "></app-login-register>
+        <app-login-register  *ngIf=" mode === 'register' && credentials.password "></app-login-register>
+      <br>
 
       <button
         class="ui fluid large teal submit button"
         (click)="(mode === 'login') ? login() : register()  ">
         {{ (mode === 'login') ? 'Login' :'Register' }}
       </button>
+
     </div>
 
   </form>
