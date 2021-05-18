@@ -12,7 +12,7 @@
     {{credentials | json}}
   </div>
 
-  <form class="ui large form">
+  <form class="ui large form" #myForm="ngForm">
 
     <h3>{{ (mode === 'login') ? 'Login' :'Register' }}</h3>
 
@@ -41,6 +41,7 @@
       <br>
 
       <button
+        [disabled]="myForm.invalid"
         class="ui fluid large teal submit button"
         (click)="(mode === 'login') ? login() : register()  ">
         {{ (mode === 'login') ? 'Login' :'Register' }}
