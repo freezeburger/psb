@@ -1,11 +1,10 @@
 
 {{ blog.blogpost$ | async | json }}
 
-  <app-blog-post></app-blog-post>
+  <app-blog-post
+    *ngFor="let postData of ( blog.blogpost$ | async )"
+    [post]="postData"
+    >
+  </app-blog-post>
 
-  <app-blog-post></app-blog-post>
-
-  <app-blog-post></app-blog-post>
-
-  <app-blog-post></app-blog-post>
 

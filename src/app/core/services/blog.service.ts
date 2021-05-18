@@ -12,6 +12,10 @@ export class BlogService {
 
   blogpost$ = new BehaviorSubject<BlogPost[]>([]);
 
+  // Subject
+  // ReplaySubject
+  // BehaviorSubject
+
   constructor(
     private http:HttpClient
   ) { }

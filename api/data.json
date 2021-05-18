@@ -7,6 +7,14 @@
       "title":"Angular Training",
       "content":"This is a blog post",
       "comments":[]
+    },
+    {
+      "id":2,
+      "author":"Secib",
+      "date":1620225428345,
+      "title":"Reactive Programming",
+      "content":"Better Side Effect",
+      "comments":[]
     }
   ],
   "polls":[],
