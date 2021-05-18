@@ -30,13 +30,15 @@
       </div>
       <a (mousedown)=" type = 'text' " (mouseup)="  type = 'password' ">Show Password</a>
 
+      <br><br>
+      <app-login-register  *ngIf=" mode === 'register' "></app-login-register>
+
       <button
         class="ui fluid large teal submit button"
         (click)="(mode === 'login') ? login() : register()  ">
         {{ (mode === 'login') ? 'Login' :'Register' }}
       </button>
     </div>
-
 
   </form>
 
