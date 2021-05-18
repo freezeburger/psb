@@ -1,5 +1,5 @@
 
-{{ blog.blogpost$ | async | json }}
+<!-- {{ blog.blogpost$ | async | json }} -->
 
   <app-blog-post
     *ngFor="let postData of ( blog.blogpost$ | async )"
@@ -7,4 +7,10 @@
     >
   </app-blog-post>
 
+  <hr>
 
+  <app-blog-post
+  *ngFor="let postData of posts"
+  [post]="postData"
+  >
+</app-blog-post>
