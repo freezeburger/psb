@@ -1,0 +1,25 @@
+<div class="ui items" [ngClass]="{ focused : comments === true }">
+  <div class="item">
+    <div class="image">
+      <img src="http://placehold.it/150x75">
+    </div>
+    <div class="content">
+      <a class="header" (click)="comments = ! comments">Blog Post Title</a>
+
+      <div class="meta">
+        <span>Author - Date</span>
+      </div>
+
+      <div class="description">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio esse amet perferendis sed veritatis ipsum, fuga libero inventore, doloremque hic nam vitae sapiente ad, veniam eos voluptate architecto consequatur totam.
+        </p>
+      </div>
+      <div class="extra">
+
+        <app-blog-post-comment *ngIf="comments"></app-blog-post-comment>
+
+      </div>
+    </div>
+  </div>
+</div>

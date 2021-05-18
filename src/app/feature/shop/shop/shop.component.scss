@@ -1,0 +1,11 @@
+:host{
+  display: flex;
+}
+
+:host>*{
+  margin:20px;
+}
+
+:host>:first-child{
+  width:68%;
+}

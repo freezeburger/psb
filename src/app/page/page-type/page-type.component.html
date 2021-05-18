@@ -1,0 +1,14 @@
+<app-base-header>
+  <ng-content select=".page-header"></ng-content>
+</app-base-header>
+
+<main class="ui main container">
+
+  <app-base-alert [alert]="alert"></app-base-alert>
+  <br>
+
+  <ng-content></ng-content>
+
+</main>
+
+<app-base-footer></app-base-footer>

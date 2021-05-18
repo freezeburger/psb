@@ -1,0 +1,8 @@
+div.items{
+  opacity: .6;
+  transition: opacity .3s ease;
+}
+
+div.items.focused{
+  opacity: 1;
+}

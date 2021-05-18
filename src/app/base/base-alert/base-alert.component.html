@@ -1,0 +1,8 @@
+<br>
+<div class="ui message transition {{alert.level}}" *ngIf="alert.visible">
+  <i class="close icon" (click)="close()"></i>
+  <div class="header">
+    Notice:
+  </div>
+  <p>{{alert.text}}</p>
+</div>

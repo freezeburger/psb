@@ -1,0 +1,41 @@
+{
+  "posts":[
+    {
+      "id":1,
+      "author":"Secib",
+      "date":1620225428345,
+      "title":"Angular Training",
+      "content":"This is a blog post",
+      "comments":[]
+    }
+  ],
+  "polls":[],
+  "users":[
+    {
+      "id":1,
+      "email":"user1@secib.fr",
+      "password":"secib"
+    },
+    {
+      "id":2,
+      "email":"user2@secib.fr",
+      "password":"secib"
+    }
+  ],
+  "products":[
+    {
+      "id":1,
+      "description":"Good Product",
+      "price":10
+    }
+  ],
+  "orders":[
+    {
+      "id":1,
+      "userId":1,
+      "products":[
+        {"productId":1,"quantity":2}
+      ]
+    }
+  ]
+}
