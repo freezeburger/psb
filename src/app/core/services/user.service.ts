@@ -16,6 +16,8 @@ export class UserService {
 
   login(credentials:Omit<User, 'id'>){}
 
-  register(credentials:Omit<User, 'id'>){}
+  register(credentials:Omit<User, 'id'>){
+     console.log('register', credentials );
+  }
 
 }

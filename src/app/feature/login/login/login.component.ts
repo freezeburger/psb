@@ -24,7 +24,8 @@ export class LoginComponent {
     console.log('login')
   }
   register(){
-    console.log('register')
+    // console.log('register')
+    this.userService.register(this.credentials);
   }
 
 
