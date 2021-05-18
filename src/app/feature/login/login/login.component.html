@@ -5,29 +5,47 @@
     </div>
   </h2>
 
+
+  <div class="ui card">
+    {{mode}}
+    <hr>
+    {{credentials | json}}
+  </div>
+
   <form class="ui large form">
+
     <div class="ui stacked segment">
       <div class="field">
         <div class="ui left icon input">
           <i class="user icon"></i>
-          <input type="text" name="email" placeholder="E-mail address">
+          <input type="text" name="email" placeholder="E-mail address" [(ngModel)]="credentials.email">
         </div>
       </div>
+
       <div class="field">
         <div class="ui left icon input">
           <i class="lock icon"></i>
-          <input type="password" name="password" placeholder="Password">
+          <input [type]="type" name="password" placeholder="Password"  [(ngModel)]="credentials.password">
         </div>
       </div>
-      <div class="ui fluid large teal submit button">Login</div>
+      <a (mousedown)=" type = 'text' " (mouseup)="  type = 'password' ">Show Password</a>
+
+      <button
+        class="ui fluid large teal submit button"
+        (click)="(mode === 'login') ? login() : register()  ">
+        {{ (mode === 'login') ? 'Login' :'Register' }}
+      </button>
     </div>
 
-    <div class="ui error message"></div>
 
   </form>
 
-  <div class="ui message">
-    New to us? <a href="#">Sign Up</a>
+  <div class="ui message" *ngIf=" mode === 'login' ">
+    New to us? <a  (click)="mode = 'register' ">Sign Up</a>
+  </div>
+
+  <div class="ui message"  *ngIf=" mode === 'register' ">
+    Allready In? <a  (click)="mode = 'login' ">Login</a>
   </div>
 
 </div>

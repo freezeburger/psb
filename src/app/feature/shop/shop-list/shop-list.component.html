@@ -2,8 +2,12 @@
   <img src="http://unsplash.it/1200/350" alt="" />
 </div>
 <div class="ui middle aligned selection list">
-  <app-shop-list-item class="item"></app-shop-list-item>
-  <app-shop-list-item class="item"></app-shop-list-item>
-  <app-shop-list-item class="item"></app-shop-list-item>
-  <app-shop-list-item class="item"></app-shop-list-item>
+
+  <div class="ui pagination menu">
+    <input type="number" [(ngModel)]="max" step="5" min="5" max="20">
+    <a class="item" *ngFor="let c of steps" (click)="cursor = c " [ngClass]="{ active: c == cursor}"> {{ c }} </a>
+  </div>
+
+  <app-shop-list-item class="item" *ngFor="let item of slicedProducts" [product]="item"></app-shop-list-item>
+
 </div>

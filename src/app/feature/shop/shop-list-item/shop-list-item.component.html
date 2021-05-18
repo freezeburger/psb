@@ -5,17 +5,17 @@
   <a class="ui left red corner label">
     <i class="heart icon"></i>
   </a>
-  <img src="http://placehold.it/125">
+  <img src="assets/images/{{product?.image}}">
 </div>
 
 <div class="content">
-  <a class="author">Product Title</a>
+  <a class="author">{{product?.title}}</a>
   <div class="metadata">
-    <span class="date">Product Price</span>
+    <span class="date">{{product?.price}}</span>
   </div>
   <br>
   <div class="text">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste id sint placeat nisi eius impedit ipsam officiis. Necessitatibus et asperiores illo fugiat suscipit recusandae, cum nemo fuga harum. Eaque, itaque.
+    {{product?.description}}
   </div>
 </div>
 

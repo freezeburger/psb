@@ -1,4 +1,5 @@
 
-    <app-shop-list></app-shop-list>
+
+    <app-shop-list [products]="(productService.products$ | async)"></app-shop-list>
 
     <app-shop-cart></app-shop-cart>
